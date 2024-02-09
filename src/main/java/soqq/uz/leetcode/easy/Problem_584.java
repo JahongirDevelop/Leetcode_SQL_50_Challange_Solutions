@@ -6,7 +6,7 @@ public class Problem_584 {
         https://leetcode.com/problems/find-customer-referee
     */
 
-    public static void main(String[] args) {
+    // Solution :
 
-    }
+    /* select name from customer where referee_id is null or referee_id!=2;  */
 }
