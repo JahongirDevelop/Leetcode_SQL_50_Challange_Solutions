@@ -5,4 +5,8 @@ public class Problem_584 {
       Paths :
         https://leetcode.com/problems/recyclable-and-low-fat-products
     */
+
+    public static void main(String[] args) {
+
+    }
 }
