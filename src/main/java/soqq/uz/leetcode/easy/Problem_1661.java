@@ -24,5 +24,6 @@ FROM (
         process_id
 ) AS subquery
 GROUP BY
-    machine_id;   */
+    machine_id;
+      */
 }
