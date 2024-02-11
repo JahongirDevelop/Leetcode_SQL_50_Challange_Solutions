@@ -7,6 +7,5 @@ public class Problem_584 {
     */
 
     // Solution :
-
-    /* select name from customer where referee_id is null or referee_id!=2;  */
+    /* select name from customer where referee_id is null or referee_id!=2; */
 }
