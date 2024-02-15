@@ -8,7 +8,6 @@ public class Problem_585 {
 
 
     // Solution :
-
     /*SELECT CAST(SUM(tiv_2016) AS NUMERIC(10, 2)) AS tiv_2016
 FROM Insurance
 WHERE tiv_2015 IN (
