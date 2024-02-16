@@ -1,5 +1,7 @@
 package soqq.uz.leetcode.easy;
 
+import soqq.uz.leetcode.DBUtil;
+
 import java.sql.*;
 
 public class Problem_595_Big_Countries {
@@ -25,6 +27,8 @@ public class Problem_595_Big_Countries {
 
 
     public static void createTable() {
+        Connection connection = null;
+
         String sql = "create table if not exists World (" +
 
                 "name varchar," +
@@ -35,7 +39,7 @@ public class Problem_595_Big_Countries {
                 ")";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/leetcode_sql_50_challange_solutions", "postgres", "1");
+            connection = DBUtil.getConnection();
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
             // SOLUTION ✅ :

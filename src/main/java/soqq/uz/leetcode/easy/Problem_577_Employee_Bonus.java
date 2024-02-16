@@ -1,5 +1,7 @@
 package soqq.uz.leetcode.easy;
 
+import soqq.uz.leetcode.DBUtil;
+
 import java.sql.*;
 
 public class Problem_577_Employee_Bonus {
@@ -34,6 +36,7 @@ public class Problem_577_Employee_Bonus {
 
 
     public static void createTable() {
+        Connection connection = null;
         String sql1 = "create table if not exists Employee (" +
                 "empId int," +
                 "name varchar," +
@@ -47,7 +50,7 @@ public class Problem_577_Employee_Bonus {
                 ")";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/leetcode_sql_50_challange_solutions", "postgres", "1");
+            connection = DBUtil.getConnection();
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql1);
             statement.executeUpdate(sql2);

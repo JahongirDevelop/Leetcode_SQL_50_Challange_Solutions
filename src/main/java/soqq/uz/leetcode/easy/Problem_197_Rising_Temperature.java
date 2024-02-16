@@ -1,5 +1,7 @@
 package soqq.uz.leetcode.easy;
 
+import soqq.uz.leetcode.DBUtil;
+
 import java.sql.*;
 
 public class Problem_197_Rising_Temperature {
@@ -25,6 +27,8 @@ public class Problem_197_Rising_Temperature {
 
 
     public static void createTable() {
+        Connection connection = null;
+
         String sql = "create table if not exists Weather  (" +
                 "id int," +
                 "recordDate date," +
@@ -32,7 +36,7 @@ public class Problem_197_Rising_Temperature {
                 ")";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/leetcode_sql_50_challange_solutions", "postgres", "1");
+            connection = DBUtil.getConnection();
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
             // SOLUTION ✅ :
