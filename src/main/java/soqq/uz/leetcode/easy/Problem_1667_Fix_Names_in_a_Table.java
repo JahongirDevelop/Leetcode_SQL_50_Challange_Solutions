@@ -7,7 +7,6 @@ public class Problem_1667_Fix_Names_in_a_Table {
     */
 
     // Solution :
-
     /* SELECT
     user_id,
     CONCAT(UPPER(SUBSTRING(name, 1, 1)), LOWER(SUBSTRING(name FROM 2))) AS name
