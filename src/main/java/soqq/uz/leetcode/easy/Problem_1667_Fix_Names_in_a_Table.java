@@ -1,5 +1,4 @@
 package soqq.uz.leetcode.easy;
-
 public class Problem_1667_Fix_Names_in_a_Table {
     /*
       Paths :
